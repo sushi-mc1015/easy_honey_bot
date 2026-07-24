@@ -1,0 +1,68 @@
+2026-07-23 14:07:45,496 [INFO] HTTPハニーボット起動 host=127.0.0.1 port=18080
+2026-07-23 14:07:46,632 [INFO] GET address=127.0.0.1 port=41188 path=/
+2026-07-23 14:07:46,632 [INFO] HTTP address=127.0.0.1 message="GET / HTTP/1.1" 200 -
+2026-07-23 14:07:46,632 [DEBUG] LOGIN address=127.0.0.1 port=41202 user='test_student' password='pass1234' path=/login
+2026-07-23 14:07:46,632 [INFO] HTTP address=127.0.0.1 message="POST /login HTTP/1.1" 403 -
+2026-07-23 14:07:46,755 [INFO] GET address=127.0.0.1 port=41208 path=/admin
+2026-07-23 14:07:46,755 [WARNING] Unknown path address=127.0.0.1 path=/admin
+2026-07-23 14:07:46,755 [INFO] HTTP address=127.0.0.1 message="GET /admin HTTP/1.1" 404 -
+2026-07-23 23:18:23,573 [INFO] HTTPハニーボット起動 host=127.0.0.1 port=18080
+2026-07-23 23:19:04,457 [INFO] GET address=127.0.0.1 port=62376 path=/
+2026-07-23 23:19:04,457 [INFO] HTTP address=127.0.0.1 message="GET / HTTP/1.1" 200 -
+2026-07-23 23:19:04,494 [INFO] GET address=127.0.0.1 port=62377 path=/favicon.ico
+2026-07-23 23:19:04,494 [WARNING] Unknown path address=127.0.0.1 path=/favicon.ico
+2026-07-23 23:19:04,494 [INFO] HTTP address=127.0.0.1 message="GET /favicon.ico HTTP/1.1" 404 -
+2026-07-23 23:19:17,829 [DEBUG] LOGIN address=127.0.0.1 port=62379 user='test_student' password='pass1234' path=/login
+2026-07-23 23:19:17,830 [INFO] HTTP address=127.0.0.1 message="POST /login HTTP/1.1" 403 -
+2026-07-23 23:19:22,831 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-23 23:19:24,559 [INFO] GET address=127.0.0.1 port=62382 path=/
+2026-07-23 23:19:24,559 [INFO] HTTP address=127.0.0.1 message="GET / HTTP/1.1" 200 -
+2026-07-23 23:19:29,561 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-23 23:19:34,827 [DEBUG] LOGIN address=127.0.0.1 port=62384 user='test_student' password='pass1234' path=/login
+2026-07-23 23:19:34,828 [INFO] HTTP address=127.0.0.1 message="POST /login HTTP/1.1" 403 -
+2026-07-23 23:19:39,839 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-23 23:19:44,841 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-23 23:19:48,443 [INFO] HTTPハニーボット停止
+2026-07-23 23:20:00,314 [INFO] HTTPハニーボット起動 host=127.0.0.1 port=18080
+2026-07-23 23:20:44,744 [INFO] GET address=127.0.0.1 port=62421 path=/login
+2026-07-23 23:20:44,744 [WARNING] Unknown path address=127.0.0.1 path=/login
+2026-07-23 23:20:44,744 [INFO] HTTP address=127.0.0.1 message="GET /login HTTP/1.1" 404 -
+2026-07-23 23:20:49,746 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-23 23:21:10,757 [INFO] GET address=127.0.0.1 port=62442 path=/
+2026-07-23 23:21:10,759 [INFO] HTTP address=127.0.0.1 message="GET / HTTP/1.1" 200 -
+2026-07-23 23:21:14,890 [DEBUG] LOGIN address=127.0.0.1 port=62443 user='aaa' password='aaa' path=/login
+2026-07-23 23:21:14,890 [INFO] HTTP address=127.0.0.1 message="POST /login HTTP/1.1" 403 -
+2026-07-23 23:21:19,894 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-23 23:21:24,896 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-24 09:19:39,161 [INFO] GET address=127.0.0.1 port=49299 path=/
+2026-07-24 09:19:39,163 [INFO] HTTP address=127.0.0.1 message="GET / HTTP/1.1" 200 -
+2026-07-24 09:19:39,233 [INFO] GET address=127.0.0.1 port=49300 path=/favicon.ico
+2026-07-24 09:19:39,234 [WARNING] Unknown path address=127.0.0.1 path=/favicon.ico
+2026-07-24 09:19:39,234 [INFO] HTTP address=127.0.0.1 message="GET /favicon.ico HTTP/1.1" 404 -
+2026-07-24 09:19:43,607 [DEBUG] LOGIN address=127.0.0.1 port=49302 user='aaaaa' password='aaaaaa' path=/login
+2026-07-24 09:19:43,607 [INFO] HTTP address=127.0.0.1 message="POST /login HTTP/1.1" 403 -
+2026-07-24 09:19:48,608 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-24 09:20:00,654 [INFO] GET address=127.0.0.1 port=49306 path=/
+2026-07-24 09:20:00,655 [INFO] HTTP address=127.0.0.1 message="GET / HTTP/1.1" 200 -
+2026-07-24 09:20:05,656 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-24 09:27:47,119 [INFO] HTTPハニーボット停止
+2026-07-24 09:36:14,456 [INFO] HTTPハニーボット起動 host=127.0.0.1 port=18080
+2026-07-24 09:36:27,052 [INFO] GET address=127.0.0.1 port=49731 path=/
+2026-07-24 09:36:27,053 [INFO] HTTP address=127.0.0.1 message="GET / HTTP/1.1" 200 -
+2026-07-24 09:36:27,116 [INFO] GET address=127.0.0.1 port=49732 path=/favicon.ico
+2026-07-24 09:36:27,116 [WARNING] Unknown path address=127.0.0.1 path=/favicon.ico
+2026-07-24 09:36:27,116 [INFO] HTTP address=127.0.0.1 message="GET /favicon.ico HTTP/1.1" 404 -
+2026-07-24 09:36:59,637 [DEBUG] LOGIN address=127.0.0.1 port=49752 user='test_student' password='pass1234' path=/login
+2026-07-24 09:36:59,638 [INFO] HTTP address=127.0.0.1 message="POST /login HTTP/1.1" 403 -
+2026-07-24 09:37:04,639 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-24 09:45:08,335 [INFO] GET address=127.0.0.1 port=49897 path=/
+2026-07-24 09:45:08,336 [INFO] HTTP address=127.0.0.1 message="GET / HTTP/1.1" 200 -
+2026-07-24 09:45:13,339 [INFO] HTTP address=127.0.0.1 message=Request timed out: timeout('timed out')
+2026-07-24 09:58:08,745 [INFO] HTTPハニーボット停止
+2026-07-24 10:00:27,815 [INFO] HTTPハニーボット起動 host=127.0.0.1 port=18080
+2026-07-24 10:00:34,173 [INFO] HTTPハニーボット停止
+2026-07-24 10:00:43,338 [INFO] HTTPハニーボット起動 host=127.0.0.1 port=18080
+2026-07-24 10:00:49,229 [INFO] GET address=127.0.0.1 port=50793 path=/
+2026-07-24 10:00:49,230 [INFO] HTTP address=127.0.0.1 message="GET / HTTP/1.1" 200 -
+2026-07-24 10:00:49,230 [DEBUG] LOGIN address=127.0.0.1 port=50794 user='test_student' password='qwerty1234' path=/login
+2026-07-24 10:00:49,230 [INFO] HTTP address=127.0.0.1 message="POST /login HTTP/1.1" 403 -

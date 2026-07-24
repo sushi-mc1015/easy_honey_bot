@@ -1,0 +1,6 @@
+HOST=127.0.0.1
+PORT=18080
+LOG_FILE=logs/access.log
+
+※設定値はhoneyserver.pyの先頭にも記載されています。
+授業範囲に合わせて、外部ライブラリを使わない単純な構成にしています。
