@@ -1,0 +1,118 @@
+HoneyFTP テスト仕様及び結果報告書
+=================================
+
+1. テスト対象
+------------
+対象プログラム: honeyftp.py
+目的: FTP風の応答、認証情報・コマンドの記録、安全な疑似応答、異常入力処理を確認する。
+テスト環境: Python 3、localhost（127.0.0.1）、TCP 2121番ポート
+
+2. テスト方針
+------------
+・外部ネットワークへ公開せず、同一PC内で実施する。
+・実在する認証情報は使用しない。
+・自動機能テスト、単体テスト、ログ確認の3段階で確認する。
+
+3. テスト項目
+------------
+TC-01 起動確認
+手順:
+  1) python honeyftp.py --config config.yaml を実行する。
+  2) エラーなく待受状態になることを確認する。
+期待結果:
+  logs/access.jsonl に server_started が記録される。
+
+TC-02 バナー確認
+手順:
+  1) サーバー起動後、python tests/test_client.py を実行する。
+期待結果:
+  先頭が「220」のバナーが返る。
+
+TC-03 認証情報の疑似受付
+手順:
+  1) USER student を送信する。
+  2) PASS test-pass-123 を送信する。
+期待結果:
+  USER後に331、PASS後に230が返る。
+  credential_submittedイベントにテスト用ユーザー名とパスワードが記録される。
+
+TC-04 FTP風コマンド応答
+手順:
+  PWD、LIST、RETR secret.zipを順に送信する。
+期待結果:
+  PWDは257、LISTは150と226、RETRは550を返す。
+  OSコマンドや実ファイル処理は実行されない。
+
+TC-05 正常切断
+手順:
+  QUITを送信する。
+期待結果:
+  221が返り、connection_closedが記録される。
+
+TC-06 設定読込の単体テスト
+手順:
+  python -m unittest discover -s tests -p "test_unit.py" -v
+期待結果:
+  test_load_config がokになる。
+
+TC-07 JSONログ出力の単体テスト
+手順:
+  TC-06と同じコマンドを実行する。
+期待結果:
+  test_json_logger がokになる。
+
+TC-08 未実装コマンド
+手順:
+  ABC testを送信する。
+期待結果:
+  502 Command not implementedが返る。
+
+TC-09 未ログインLIST
+手順:
+  USER/PASS前にLISTを送信する。
+期待結果:
+  530 Please login with USER and PASSが返る。
+
+TC-10 長大入力
+手順:
+  max_command_lengthを超える1行を送信する。
+期待結果:
+  500 Command line too longを返して切断し、oversized_inputを記録する。
+
+4. 実施結果
+------------
+実施日: 2026-07-23
+
+TC-01: 合格。サーバー起動とserver_startedログを確認。
+TC-02: 合格。220 BackupFTP Service readyを確認。
+TC-03: 合格。331、230応答とcredential_submittedログを確認。
+TC-04: 合格。257、150/226、550応答を確認。
+TC-05: 合格。221応答とconnection_closedログを確認。
+TC-06: 合格。設定読込テスト成功。
+TC-07: 合格。JSON Linesログ出力テスト成功。
+TC-08: 合格。502応答を確認。
+TC-09: 合格。530応答を確認。
+TC-10: 合格。500応答とoversized_inputログを確認。
+
+5. 自動機能テスト出力例
+----------------------
+RECV: 220 BackupFTP Service ready
+SEND: USER student
+RECV: 331 Password required
+SEND: PASS test-pass-123
+RECV: 230 Login successful
+SEND: PWD
+RECV: 257 "/srv/backup" is the current directory
+SEND: LIST
+RECV: 150 Opening ASCII mode data connection
+RECV: 226 Transfer complete
+SEND: RETR secret.zip
+RECV: 550 Requested action not taken
+SEND: QUIT
+RECV: 221 Goodbye
+PASS: all functional checks succeeded
+
+6. 総合判定
+----------
+全10項目に合格した。FTP風ハニーボットとして接続、資格情報、コマンドを記録し、
+実際の認証・ファイル操作・OSコマンド実行を行わないことを確認した。

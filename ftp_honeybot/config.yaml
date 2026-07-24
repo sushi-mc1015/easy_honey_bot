@@ -1,0 +1,7 @@
+host: "127.0.0.1"
+port: 2121
+server_name: "BackupFTP"
+banner: "Service ready"
+idle_timeout_seconds: 30
+max_command_length: 512
+log_file: "logs/access.jsonl"

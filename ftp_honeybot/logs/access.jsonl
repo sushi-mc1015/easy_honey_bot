@@ -1,0 +1,11 @@
+{"timestamp": "2026-07-23T13:54:08.333+00:00", "event": "server_started", "addresses": "('127.0.0.1', 2121)"}
+{"timestamp": "2026-07-23T13:54:09.492+00:00", "event": "connection_opened", "client_ip": "127.0.0.1", "client_port": 57426}
+{"timestamp": "2026-07-23T13:54:09.492+00:00", "event": "command_received", "client_ip": "127.0.0.1", "client_port": 57426, "command": "USER", "argument": "student"}
+{"timestamp": "2026-07-23T13:54:09.492+00:00", "event": "command_received", "client_ip": "127.0.0.1", "client_port": 57426, "command": "PASS", "argument": "test-pass-123"}
+{"timestamp": "2026-07-23T13:54:09.493+00:00", "event": "credential_submitted", "client_ip": "127.0.0.1", "client_port": 57426, "username": "student", "password": "test-pass-123"}
+{"timestamp": "2026-07-23T13:54:09.493+00:00", "event": "command_received", "client_ip": "127.0.0.1", "client_port": 57426, "command": "PWD", "argument": ""}
+{"timestamp": "2026-07-23T13:54:09.493+00:00", "event": "command_received", "client_ip": "127.0.0.1", "client_port": 57426, "command": "LIST", "argument": ""}
+{"timestamp": "2026-07-23T13:54:09.493+00:00", "event": "command_received", "client_ip": "127.0.0.1", "client_port": 57426, "command": "RETR", "argument": "secret.zip"}
+{"timestamp": "2026-07-23T13:54:09.493+00:00", "event": "command_received", "client_ip": "127.0.0.1", "client_port": 57426, "command": "QUIT", "argument": ""}
+{"timestamp": "2026-07-23T13:54:09.493+00:00", "event": "connection_closed", "client_ip": "127.0.0.1", "client_port": 57426}
+{"timestamp": "2026-07-23T13:54:09.708+00:00", "event": "server_stopped"}
